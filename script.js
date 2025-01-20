@@ -11,12 +11,20 @@ menuIcon.addEventListener("click", () => {
 
 // Close the navigation menu when any link is clicked
 navLinks.forEach(link => {
-    link.addEventListener("click", () => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault(); // Prevent default anchor behavior
         nav.classList.remove("active");
         // Remove active class from all links
         navLinks.forEach(link => link.classList.remove("active"));
         // Add active class to the clicked link
         link.classList.add("active");
+
+        // Scroll to the section with an offset
+        const targetSection = document.querySelector(link.getAttribute("href"));
+        window.scrollTo({
+            top: targetSection.offsetTop - 7 * 16, // Offset for header height (7rem = 7 * 16px)
+            behavior: 'smooth' // Smooth scrolling
+        });
     });
 });
 
@@ -38,6 +46,8 @@ window.addEventListener("scroll", () => {
         }
     });
 });
+
+// Popup functionality
 document.addEventListener("DOMContentLoaded", function () {
     const popup = document.getElementById("popup");
     const closeButton = document.getElementById("close-popup");
