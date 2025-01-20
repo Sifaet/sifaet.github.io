@@ -1,116 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-        }
-        h1 {
-            
-            text-align: left ;
-        }
-        .banner img {
-            width: 100%;
-            height: auto;
-        }
-
-        .profile-picture img {
-            width: 120px;
-            height: 130px;
-           
-            border-radius: 50%;
-            margin-top: -95px;
-            
-            border: 5px solid white;
-        }
-
-        .bio {
-            max-width: auto; /* Adjust width as needed */
-            text-align: left;
-            margin-top: 10px;
-        }
-
-        main {
-            padding: 20px;
-            max-width: auto;
-        }
-
-        section {
-            text-align: left;
-            margin-bottom: 20px;
-            padding: 10px;
-        }
-
-        h2 {
-            color: #333;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            background-color: white;
-            margin: 10px 0;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio Website</title>
 </head>
 <body>
-
     <header>
-        <div class="banner">
-            <img src="01723271022.png" alt="Banner Image">
-        </div>
-        <div class="profile-picture">
-            <img src="prifile pic.png" alt="Profile Picture">
-        </div>
-        <h1>Abu Sifaet Chowdhury</h1>
-        <p class="bio">Hi, I’m Abu Sifaet Chowdhury! I’m a passionate software engineer with over 0 years of experience in developing innovative software solutions. My expertise lies in full-stack development, with a strong focus on creating efficient and scalable web applications. I have a deep understanding of various programming languages, including JavaScript, Python, and Java, and I’m proficient in frameworks like React, Angular, and Django.</p>
+        <a href="#" class="logo">Sifaet</a>
+        <i class="fa fa-bars" id="menu-icon"></i> <!-- Add hamburger icon -->
+        <nav>
+            <a href="#home" class="active">Home</a>
+            <!-- <a href="#">Services</a>-->
+            <a href="#skills">Skills</a> 
+            <a href="#education">Education</a>
+            <!-- <a href="#">Experience</a> -->
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
-    <main>
-        
-        <section id="education">
-            <h2>Education Background</h2>
-            <ul>
-                <li>CSE,International Islamic University Chittagong, 2025</li>
-                
-            </ul>
-        </section>
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>Progamming</li>
-                <li>Team Work</li>
-                <li>Project  Managment</li>
-            </ul>
-        </section>
-        <section id="experience">
-            <h2>Job Experience</h2>
-            <ul>
-                <li>None at the moment</li>
-            </ul>
-        </section>
     
-    </main>
-    <script>
-        // Add any interactive JavaScript here
-    </script>
-</body>
+    <section class="home" id="home"> <!-- Add id="home" to Home section -->
+        <div class="home-img">
+            <img src="main.png" alt="">
+        </div>
+        <div class="home-content">
+            <h1>Hi, It's <span>Sifaet</span></h1>
+            <h3 class="typing-text">I'm a <span></span></h3>
+            <p>A results-driven professional specializing in cybersecurity, offering expert services in threat detection, incident response, and risk management. Proficient in SIEM systems, vulnerability assessments, and real-time monitoring to strengthen security and safeguard critical assets.</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/abusifaetchowdhury/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Sifaet"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <a href="#" class="btn">Hire me</a>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-box">
+            <div class="skills-category">
+                <h3 class="category-title">Programming Languages</h3>
+                <p class="skill-list">HTML, CSS, JavaScript, Java, C, C++, C#, PHP, SQL</p>
+            </div>
+            <div class="skills-category">
+                <h3 class="category-title">Frameworks & Libraries</h3>
+                <p class="skill-list">Bootstrap, jQuery, React, Node.js, Spring Boot</p>
+            </div>
+            <div class="skills-category">
+                <h3 class="category-title">Tools & Platforms</h3>
+                <p class="skill-list">Git, Docker, Visual Studio Code, IntelliJ IDEA, MySQL Workbench</p>
+            </div>
+            <div class="skills-category">
+                <h3 class="category-title">Other Skills</h3>
+                <p class="skill-list">REST API Development, Problem Solving, Debugging, Team Collaboration</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="education" id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="education-info">
+            <div class="education-item">
+                <h3 class="degree">B. Sc. in Computer Science and Engineering</h3>
+                <p class="university">INTERNATIONAL ISLAMIC UNIVERSITY CHITTAGONG</p>
+                <p class="year">2022 - 2025</p>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <h3>Email</h3>
+                <p>abusifaetchowdhury@gmail.com</p>
+            </div>
+            <div class="contact-item">
+                <h3>Phone</h3>
+                <p>(+880) 1723 271022</p>
+            </div>
+            <div class="contact-item">
+                <h3>Location</h3>
+                <p>Chittagong, Bangladesh</p>
+            </div>
+        </div>
+        <a href="https://mail.google.com" class="btn">Get in Touch</a>
+    </section>
+
+    
+    
+    
+
+    <script src="script.js"></script>
+    </body>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h2>Disclaimer</h2>
+            <p>Maximum information is wrong, do not take it seriously.</p>
+            <button id="close-popup" class="btn">Close</button>
+        </div>
+    </div>
+    
 </html>
