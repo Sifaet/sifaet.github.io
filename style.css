@@ -21,6 +21,41 @@ body{
     background-color: black;
     color: white;
 }
+/* Footer Section */
+footer {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text for contrast */
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #ff0000; /* Red links matching the theme */
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff; /* White on hover for emphasis */
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+/* Responsive Footer */
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 15px 0;
+    }
+
+    footer a {
+        display: block;
+        margin: 5px 0;
+    }
+}
 
 header {
     position: fixed;
@@ -142,7 +177,7 @@ span{
 }
 
 .home-content p{
-    font-size: 1.6rem;
+    font-size: 1.5rem;
 }
 
 .home-img{
@@ -206,10 +241,15 @@ span{
     box-shadow: 0 0 25px #b74b4b;
 }
 
+
 .typing-text{
-    font-size: 34px;
+    font-size: 3.4rem;
     font-weight: 600;
-    min-width: 280px;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #b74b4b;
 }
 
 .typing-text span{
@@ -232,13 +272,6 @@ span{
     right: -8;
     animation: cursor 0.6s infinite;
 }
-
-@keyframes cursor{
-    to{
-        border-left: 3px solid #b74b4b;
-    }
-}
-
 @keyframes words{
     0%, 20%{
         content: "CTF Player";
@@ -256,7 +289,11 @@ span{
         content: "SOC Analyst";
     }
 }
-
+@keyframes cursor{
+    to{
+        border-left: 3px solid #b74b4b;
+    }
+}
 @media (max-width: 1000px){
     .home{
         gap: 4rem;
@@ -332,6 +369,56 @@ span{
     font-weight: 500;
     color: #b74b4b;
 }
+/* Projects section*/
+.experience {
+    background-color: #161616;
+    padding: 5rem 9%;
+    min-height: 100vh;
+}
+
+.section-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #b74b4b;
+    margin-bottom: 3rem;
+}
+
+.experience-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.experience-item {
+    background-color: #222222;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    width: 300px;
+    text-align: center;
+}
+
+.experience-item h3 {
+    font-size: 2rem;
+    color: #b74b4b;
+    font-weight: 600;
+}
+
+.experience-item p {
+    font-size: 1.6rem;
+    color: white;
+    margin: 0.5rem 0;
+}
+
+.experience-item p.year {
+    font-weight: 500;
+    color: #b74b4b;
+}
+
+
 /* Contact Section */
 .contact {
     background-color: #161616;
@@ -344,7 +431,7 @@ span{
     font-weight: 700;
     text-align: center;
     color: #b74b4b;
-    margin-bottom: 3rem;
+    margin-bottom: 30rem;
 }
 
 .contact-info-horizontal {
